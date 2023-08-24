@@ -3,7 +3,7 @@ import os
 import json
 import datetime
 
-data = open('/Users/james/Desktop/WeChatDB/db2/Chat_3c0825dcf3b568028bcf00ee45656d60.json').read()
+data = open('/Users/james/Desktop/WeChatDB/db8/Chat_c361fce587751cedffb3e34d40fddb6b.json').read()
 data = json.loads(data)
 
 dict = {}
@@ -38,7 +38,7 @@ import matplotlib.pyplot as plt
 # 导入字体管理模块
 from mplfonts import use_font
 #指定中文字体
-use_font('SimHei')
+use_font('Noto Serif CJK SC')
 
 axis_x=[i[:2]+'\n点\n'+i[2:] for i in result]
 axis_y=[result[i] for i in result]

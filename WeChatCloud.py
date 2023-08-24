@@ -1,7 +1,7 @@
 import os
 import json
 
-data = open('/Users/james/Desktop/WeChatDB/db2/Chat_3c0825dcf3b568028bcf00ee45656d60.json').read()
+data = open('/Users/james/Desktop/WeChatDB/db8/Chat_c361fce587751cedffb3e34d40fddb6b.json').read()
 data = json.loads(data)
 
 content = ""
@@ -43,6 +43,7 @@ wc = wordcloud.WordCloud(
     max_words=200,
     # 配置停止词参数
     stopwords=stopwords,
+    mask=background
 )
 
 wc.generate(text)

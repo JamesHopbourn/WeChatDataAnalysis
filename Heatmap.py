@@ -3,7 +3,7 @@ import os
 import json
 import datetime
 
-data = open('/Users/james/Desktop/WeChatDB/db2/Chat_55ce213c2ad742d8ea91bf2c5ee282fb.json').read()
+data = open('/Users/james/Desktop/WeChatDB/db8/Chat_c361fce587751cedffb3e34d40fddb6b.json').read()
 data = json.loads(data)
 
 statistics_dict = {}
@@ -35,9 +35,9 @@ x_labels = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"
 import numpy as np
 import matplotlib.pyplot as plt
 from mplfonts import use_font
-use_font('SimHei')
+use_font('SIMSUN')
 
-fig, axe = plt.subplots(figsize = (15, 15))
+fig, axe = plt.subplots(figsize = (15, 150))
 axe.set_xticks(np.arange(len(x_labels)))
 axe.set_yticks(np.arange(len(y_labels)))
 axe.set_xticklabels(x_labels)
