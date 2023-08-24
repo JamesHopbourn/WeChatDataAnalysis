@@ -39,6 +39,7 @@ wc = wordcloud.WordCloud(
     font_path="SIMSUN.ttf",
     width=1000,
     height=1000,
+    # 替换 skyblue 为 hexcode 可以设置任意背景颜色
     background_color="skyblue",
     max_words=200,
     # 配置停止词参数
