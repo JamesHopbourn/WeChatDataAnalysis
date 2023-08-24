@@ -43,6 +43,7 @@ wc = wordcloud.WordCloud(
     max_words=200,
     # 配置停止词参数
     stopwords=stopwords,
+    # 配置爱心图片遮罩
     mask=background
 )
 
