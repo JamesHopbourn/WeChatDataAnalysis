@@ -29,7 +29,7 @@ for item in sort:
 	values.append(item[1])
 	y_labels.append(item[0])
 
-x_labels = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+x_labels = [ "周日", "周一", "周二", "周三", "周四", "周五", "周六"]
 
 # 导入 matplotlib 绘图
 import numpy as np
