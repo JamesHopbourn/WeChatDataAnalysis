@@ -2,6 +2,12 @@
 import os
 import json
 import datetime
+import numpy as np
+import matplotlib.pyplot as plt
+from mplfonts import use_font
+# 导入 SimHei 字体，第一次使用请在项目目录中使用如下命令导入
+# mplfonts init && mplfonts install --update SimHei.ttf
+use_font('SimHei')
 
 data = open('/Users/james/Code/Chat_a3e8d75a6b1d3cc92d0bdc4dd75efa14.json').read()
 data = json.loads(data)
@@ -21,21 +27,12 @@ for item in data:
 		
 # 对数据结果进行排序
 sort = sorted(statistics_dict.items(), key=lambda x:x[0])
-# 定义空的 values
 values = []
-# 定义空格 y_labels
 y_labels = []
 for item in sort:	
 	values.append(item[1])
 	y_labels.append(item[0])
-
 x_labels = [ "周日", "周一", "周二", "周三", "周四", "周五", "周六"]
-
-# 导入 matplotlib 绘图
-import numpy as np
-import matplotlib.pyplot as plt
-from mplfonts import use_font
-use_font('SimHei')
 
 fig, axe = plt.subplots(figsize = (15, 150))
 axe.set_xticks(np.arange(len(x_labels)))
