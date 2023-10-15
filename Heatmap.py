@@ -3,7 +3,7 @@ import os
 import json
 import datetime
 
-data = open('/Users/james/Desktop/WeChatDB/db8/Chat_c361fce587751cedffb3e34d40fddb6b.json').read()
+data = open('/Users/james/Code/Chat_a3e8d75a6b1d3cc92d0bdc4dd75efa14.json').read()
 data = json.loads(data)
 
 statistics_dict = {}
@@ -35,13 +35,19 @@ x_labels = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"
 import numpy as np
 import matplotlib.pyplot as plt
 from mplfonts import use_font
-use_font('SIMSUN')
+use_font('SimHei')
 
 fig, axe = plt.subplots(figsize = (15, 150))
 axe.set_xticks(np.arange(len(x_labels)))
 axe.set_yticks(np.arange(len(y_labels)))
 axe.set_xticklabels(x_labels)
 axe.set_yticklabels(y_labels)
-im = axe.imshow(values, cmap=plt.cm.Wistia_r)
+im = axe.imshow(values, cmap=plt.cm.Wistia)
+
+# 添加数值标签
+for i in range(len(y_labels)):
+    for j in range(len(x_labels)):
+        axe.text(j, i, values[i][j], ha="center", va="center", color="black")
+
 axe.figure.colorbar(im, ax=axe)
 plt.savefig('history.png')
